@@ -1,0 +1,82 @@
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video,
+.game-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ui-container {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 200px;
+}
+
+.connect-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.connect-button:hover {
+  background-color: #1976D2;
+}
+
+.connect-button.connected {
+  background-color: #4CAF50;
+}
+
+.play-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.play-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.play-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.stats-container {
+  color: white;
+  text-align: center;
+}
+
+.stats-container p {
+  margin: 5px 0;
+}
